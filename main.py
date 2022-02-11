@@ -70,3 +70,6 @@ plt.title('Гистограмма распределения яркостей')
 plt.plot(bins, hist, color='gray', linestyle='-', linewidth=1)
 plt.legend(['gray'])
 show()
+
+# Сохраняем преобразованное изображение по указанному пользователем пути
+imsave(args.output_file_path, output_image)
