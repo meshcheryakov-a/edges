@@ -15,3 +15,14 @@
 # Дополнительные параметры: Параметр, отвечающий за выбор алгоритма
 #
 
+# Считываем параметры в качестве аргументов командной строки с помощью argparse
+import argparse
+parser = argparse.ArgumentParser(description='Выделение контуров')
+parser.add_argument('-i', '--input_file_path', type=str, help='Путь к исходному изображению', required=True)
+parser.add_argument('-o', '--output_file_path', type=str, help='Путь, по которому будет сохранено результирующее изображение', required=True)
+parser.add_argument('-a', '--algorithm', type=str, choices=['prewitt', 'sobel', 'roberts', 'scharr'], help='Параметр, отвечающий за выбор алгоритма', required=True)
+args = parser.parse_args()
+print(args.input_file_path)
+print(args.output_file_path)
+print(args.algorithm)
+
